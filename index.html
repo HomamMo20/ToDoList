@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        font-weight: bold;
+        background-color: red;
+        /* width: 800px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        background-color: #5f3dc4;
+      }
+      button {
+        cursor: pointer;
+      }
+      .theWholePart {
+        margin: 100px;
+      }
+      .theInputPart {
+        background-color: blueviolet;
+        /* margin-bottom: 50px; */
+        height: 100px;
+      }
+
+      h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input {
+        height: 50px;
+        width: 340px;
+        font-size: 15px;
+        /* background-color: #1864ab; */
+        color: #1864ab;
+        /* background-color: #a5d8ff; */
+      }
+      .theTaskInput {
+        width: 100%;
+      }
+      .AddBtn {
+        height: 50px;
+        width: 50px;
+        background-color: #9775fa;
+        border: none;
+        font-size: 20px;
+        margin-bottom: 1rem;
+      }
+
+      .theOutputPart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 394.45px;
+        background-color: #91a7ff;
+        height: 100px;
+        border-radius: 8px;
+        gap: 20px;
+      }
+      .btn {
+        width: 30px;
+        border: none;
+        background-color: #5c7cfa;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        border-radius: 5px;
+      }
+      .btn-icon {
+        width: 30px;
+        height: 30px;
+        /* margin-left: 4px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      p {
+        /* background-color: #868e96; */
+        /* width: 50px; */
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      .hidden {
+        display: none;
+      }
+      .tasksBox {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      /* // Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) {
+        .theWholePart {
+          width: 50%;
+          text-align: center;
+        }
+        .theTaskInput {
+          width: 100%;
+        }
+        .theOutputPart {
+          width: 100%;
+          /* margin-top: 2rem; */
+        }
+        .AddBtn {
+          width: 100%;
+        }
+      }
+
+      /* // Medium devices (tablets, 768px and up) */
+      @media (min-width: 768px) {
+        .theWholePart {
+          width: 50%;
+          text-align: center;
+        }
+        .theTaskInput {
+          width: 100%;
+        }
+        .theOutputPart {
+          width: 100%;
+          /* margin-top: 2rem; */
+        }
+        .AddBtn {
+          width: 100%;
+        }
+      }
+
+      /* // Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
+        .theWholePart {
+          width: 50%;
+          text-align: center;
+        }
+        .theTaskInput {
+          width: 100%;
+        }
+        .theOutputPart {
+          width: 100%;
+          /* margin-top: 2rem; */
+        }
+        .AddBtn {
+          width: 100%;
+        }
+      }
+
+      /* // X-Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+        .theWholePart {
+          width: 50%;
+          text-align: center;
+        }
+        .theTaskInput {
+          width: 100%;
+        }
+        .theOutputPart {
+          width: 100%;
+          /* margin-top: 2rem; */
+        }
+        .AddBtn {
+          width: 100%;
+        }
+      }
+
+      /* // XX-Large devices (larger desktops, 1400px and up) */
+      @media (min-width: 1400px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="theWholePart">
+      <div class="theInputPart">
+        <h1>To Do List</h1>
+        <input class="theTaskInput" value="Write your new task" />
+      </div>
+      <button class="AddBtn">Add</button>
+      <div class="tasksBox">
+        <div class="theOutputPart hidden">
+          <p>first Task</p>
+          <div class="iconsBtns">
+            <button class="btn">
+              <svg
+                class="btn-icon delBtn"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </button>
+            <button class="btn">
+              <svg
+                class="btn-icon upBtn"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                />
+              </svg>
+            </button>
+            <button class="btn">
+              <svg
+                class="btn-icon DownBtn"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
