@@ -88,7 +88,7 @@
         color: #3d3d3d;
         border: none;
         font-size: 20px;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         font-weight: bolder;
         border-bottom-right-radius: 1rem;
         border-bottom-left-radius: 1rem;
@@ -123,6 +123,11 @@
         background-color: #ffee58; /* Soft Yellow */
       }
 
+      /* for the delete button */
+      .btn:first-child:hover {
+        background-color: #e53935;
+      }
+
       .btn-icon {
         width: 30px;
         height: 30px;
@@ -132,6 +137,7 @@
         justify-content: center;
         border-radius: 50%;
       }
+
       p {
         /* background-color: #868e96; */
         /* width: 50px; */
@@ -149,7 +155,7 @@
       .tasksBox {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 1.2rem;
       }
 
       @media (max-width: 576px) {
@@ -162,7 +168,6 @@
         }
         .theOutputPart {
           width: var(--MobContainerChildW);
-          /* margin-top: 2rem; */
         }
         .AddBtn {
           width: var(--MobContainerChildW);
@@ -179,7 +184,6 @@
         }
         .theOutputPart {
           width: var(--MobContainerChildW);
-          /* margin-top: 2rem; */
         }
         .AddBtn {
           width: var(--MobContainerChildW);
@@ -197,7 +201,6 @@
         }
         .theOutputPart {
           width: var(--MobContainerChildW);
-          /* margin-top: 2rem; */
         }
         .AddBtn {
           width: var(--MobContainerChildW);
@@ -215,7 +218,6 @@
         }
         .theOutputPart {
           width: var(--MobContainerChildW);
-          /* margin-top: 2rem; */
         }
         .AddBtn {
           width: var(--MobContainerChildW);
@@ -227,7 +229,6 @@
         .theWholePart {
           --MobContainerWidth: 50%;
           width: var(--MobContainerWidth);
-          /* width: 50%; */
           text-align: center;
         }
         .theTaskInput {
@@ -235,15 +236,10 @@
         }
         .theOutputPart {
           width: var(--MobContainerChildW);
-          /* margin-top: 2rem; */
         }
         .AddBtn {
           width: var(--MobContainerChildW);
         }
-      }
-      .delBtn {
-        /* background-color: #e53935; */
-        color: #e53935;
       }
       /* completed P: for the future in case i add new feature in js or any other way for the completed tasks rather than just 
 delete them */
@@ -255,6 +251,7 @@ delete them */
       /* // XX-Large devices (larger desktops, 1400px and up) */
       @media (min-width: 1400px) {
         .theWholePart {
+          --MobContainerWidth: 50%;
           width: var(--MobContainerWidth);
           text-align: center;
         }
@@ -263,7 +260,6 @@ delete them */
         }
         .theOutputPart {
           width: var(--MobContainerChildW);
-          margin-top: 2rem;
         }
         .AddBtn {
           width: var(--MobContainerChildW);
