@@ -3,41 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>To Do List</title>
     <style>
+      :root {
+        --MobContainerWidth: 80%;
+        --MobContainerChildW: 100%;
+      }
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
       body {
-        font-family: sans-serif;
+        /* min-height: 100vh; */
+        /* height: 100vh; */
+        /* overflow-y: auto; */
+
+        font-family: 'Roboto', sans-serif;
+
         font-weight: bold;
         background-color: red;
         /* width: 800px; */
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: sans-serif;
-        background-color: #5f3dc4;
+        /* font-family: sans-serif; */
+        background-color: #e3f2fd;
+        font-weight: bold;
         /* width: 1400px; */
       }
       button {
         cursor: pointer;
       }
       .theWholePart {
-        margin: 100px;
+        margin: 2rem;
+        width: 40%;
+        /* text-align: center; */
+
+        /* height: -webkit-fill-available; */
       }
       .theInputPart {
-        background-color: blueviolet;
+        background-color: #bbdefb;
         /* margin-bottom: 50px; */
-        height: 100px;
+        height: 80px;
+        width: 100%;
+        /* border-radius: 1rem; */
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
       }
 
       h1 {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: #0d47a1;
       }
 
       input {
@@ -45,27 +68,44 @@
         width: 340px;
         font-size: 15px;
         /* background-color: #1864ab; */
-        color: #1864ab;
+        color: #0d47a1;
         /* background-color: #a5d8ff; */
       }
       .theTaskInput {
         width: 100%;
+        height: 55%;
+        border: none;
       }
+
+      .theTaskInput:focus {
+        outline: none;
+      }
+
       .AddBtn {
         height: 50px;
         width: 50px;
-        background-color: #9775fa;
+        background-color: #42a5f5;
+        color: #3d3d3d;
         border: none;
         font-size: 20px;
         margin-bottom: 1rem;
+        font-weight: bolder;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+      }
+
+      .AddBtn:hover {
+        color: #1e88e5;
       }
 
       .theOutputPart {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 394.45px;
-        background-color: #91a7ff;
+        /* width: 394.45px; */
+        width: 100%;
+        background-color: #bbdefb; /* Pale Blue */
+        color: #0d47a1;
         height: 100px;
         border-radius: 8px;
         gap: 20px;
@@ -73,12 +113,16 @@
       .btn {
         width: 30px;
         border: none;
-        background-color: #5c7cfa;
+        background-color: transparent;
         /* display: flex; */
         /* justify-content: center; */
         /* align-items: center; */
         border-radius: 5px;
       }
+      .btn:hover {
+        background-color: #ffee58; /* Soft Yellow */
+      }
+
       .btn-icon {
         width: 30px;
         height: 30px;
@@ -110,107 +154,119 @@
 
       @media (max-width: 576px) {
         .theWholePart {
-          width: 50%;
+          width: var(--MobContainerWidth);
           text-align: center;
         }
         .theTaskInput {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
         .theOutputPart {
-          width: 100%;
+          width: var(--MobContainerChildW);
           /* margin-top: 2rem; */
         }
         .AddBtn {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
       }
       /* // Small devices (landscape phones, 576px and up) */
       @media (min-width: 576px) {
         .theWholePart {
-          width: 50%;
+          width: var(--MobContainerWidth);
           text-align: center;
         }
         .theTaskInput {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
         .theOutputPart {
-          width: 100%;
+          width: var(--MobContainerChildW);
           /* margin-top: 2rem; */
         }
         .AddBtn {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
       }
 
       /* // Medium devices (tablets, 768px and up) */
       @media (min-width: 768px) {
         .theWholePart {
-          width: 50%;
+          width: var(--MobContainerWidth);
           text-align: center;
         }
         .theTaskInput {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
         .theOutputPart {
-          width: 100%;
+          width: var(--MobContainerChildW);
           /* margin-top: 2rem; */
         }
         .AddBtn {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
       }
 
       /* // Large devices (desktops, 992px and up) */
       @media (min-width: 992px) {
         .theWholePart {
-          width: 50%;
+          width: var(--MobContainerWidth);
           text-align: center;
         }
         .theTaskInput {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
         .theOutputPart {
-          width: 100%;
+          width: var(--MobContainerChildW);
           /* margin-top: 2rem; */
         }
         .AddBtn {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
       }
 
       /* // X-Large devices (large desktops, 1200px and up) */
       @media (min-width: 1200px) {
         .theWholePart {
-          width: 50%;
+          --MobContainerWidth: 50%;
+          width: var(--MobContainerWidth);
+          /* width: 50%; */
           text-align: center;
         }
         .theTaskInput {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
         .theOutputPart {
-          width: 100%;
+          width: var(--MobContainerChildW);
           /* margin-top: 2rem; */
         }
         .AddBtn {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
+      }
+      .delBtn {
+        /* background-color: #e53935; */
+        color: #e53935;
+      }
+      /* completed P: for the future in case i add new feature in js or any other way for the completed tasks rather than just 
+delete them */
+      .completed p {
+        text-decoration: line-through;
+        color: var(--completed-task-color);
       }
 
       /* // XX-Large devices (larger desktops, 1400px and up) */
       @media (min-width: 1400px) {
         .theWholePart {
-          width: 50%;
+          width: var(--MobContainerWidth);
           text-align: center;
         }
         .theTaskInput {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
         .theOutputPart {
-          width: 100%;
-          /* margin-top: 2rem; */
+          width: var(--MobContainerChildW);
+          margin-top: 2rem;
         }
         .AddBtn {
-          width: 100%;
+          width: var(--MobContainerChildW);
         }
       }
     </style>
@@ -219,7 +275,7 @@
     <div class="theWholePart">
       <div class="theInputPart">
         <h1>To Do List</h1>
-        <input class="theTaskInput" value="Write your new task" />
+        <input class="theTaskInput" placeholder="Write your new task" />
       </div>
       <button class="AddBtn">Add</button>
       <div class="tasksBox">
